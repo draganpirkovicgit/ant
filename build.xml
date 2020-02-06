@@ -1,1 +1,13 @@
-afewfeadaf
+<project name="MyProject" default="init" basedir=".">
+  <description>
+    simple example build file
+  </description>
+  <!-- set global properties for this build -->
+  <property name="password" value="draga%n"/>
+  
+
+  <target name="init"
+        description="clean up">
+   <echo>${password}</echo>
+  </target>
+</project>
