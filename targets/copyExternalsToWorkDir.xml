@@ -1,1 +1,10 @@
 
+<target name="CopyExternalsToWorkDir">
+		<copy todir=".">
+			<fileset dir="./externals/">
+				<exclude name="**/deploy/"/>
+				<exclude name="**/.svn/"/>
+			</fileset>
+			<regexpmapper from="^([A-Z a-z 0-9 \_\.\!\@\#\%\&amp;\^\$\(\)\-\+\{\}\[\]\;\'\,\.\~\`]+)(.*)$$" to="\2"/>
+		</copy>
+	</target>
