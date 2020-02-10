@@ -1,10 +1,15 @@
 
+ <!-- ================================================================== 
+      Copy content of folder externals
+	Exclude deploy and .svn folders 
+	Copy folders and files without root(project) folder
+-->
 <target name="CopyExternalsToWorkDir">
-		<copy todir=".">
-			<fileset dir="./externals/">
-				<exclude name="**/deploy/"/>
-				<exclude name="**/.svn/"/>
-			</fileset>
-			<regexpmapper from="^([A-Z a-z 0-9 \_\.\!\@\#\%\&amp;\^\$\(\)\-\+\{\}\[\]\;\'\,\.\~\`]+)(.*)$$" to="\2"/>
-		</copy>
-	</target>
+	<copy todir=".">
+		<fileset dir="./externals/">
+			<exclude name="**/deploy/"/>
+			<exclude name="**/.svn/"/>
+		</fileset>
+		<regexpmapper from="^([A-Z a-z 0-9 \_\.\!\@\#\%\&amp;\^\$\(\)\-\+\{\}\[\]\;\'\,\.\~\`]+)(.*)$$" to="\2"/>
+	</copy>
+</target>
