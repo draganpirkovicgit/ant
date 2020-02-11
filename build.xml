@@ -1,13 +1,13 @@
-<project name="MyProject" default="init" basedir=".">
+<project name="test" default="init" basedir=".">
   <description>
     simple example build file
   </description>
-  <!-- set global properties for this build -->
+
   
   
 
-  <target name="init"
-        description="clean up">
-   <echo>${password}</echo>
+  <target name="init" description="clean up">
+   <echo>Hi from test</echo>
   </target>
+  
 </project>
