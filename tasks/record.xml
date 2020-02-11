@@ -1,1 +1,2 @@
 
+<record name="${log.location}/${log.location}" loglevel="error"/>
