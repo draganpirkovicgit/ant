@@ -1,0 +1,7 @@
+Writes all build information out to an XML file named log.xml, or the value of the XmlLogger.file property if present, when used as a listener. 
+When used as a logger, it writes all output to either the console or to the value of -logfile. Whether used as a listener or logger, the output is not generated until the build is complete, as it buffers the information in order to provide timing information for task, targets, and the project.
+
+By default the XML file creates a reference to an XSLT file log.xsl in the current directory; look in ANT_HOME/etc for one of these. You can set the property ant.XmlLogger.stylesheet.uri to provide a URI to a style sheet. This can be a relative or absolute file path, or an HTTP URL. If you set the property to the empty string, , no XSLT transform is declared at all.
+
+ant -listener org.apache.tools.ant.XmlLogger
+ant -logger org.apache.tools.ant.XmlLogger -verbose -logfile build_log.xml
