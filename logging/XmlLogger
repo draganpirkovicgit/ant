@@ -10,5 +10,5 @@ You can set the property ant.XmlLogger.stylesheet.uri to provide a URI to a styl
 This can be a relative or absolute file path,or an HTTP URL. 
 If you set the property to the empty string, , no XSLT transform is declared at all.
 
-ant -listener org.apache.tools.ant.XmlLogger
+ant -listener org.apache.tools.ant.XmlLogger -DXmlLogger.file=build_log.xml
 ant -logger org.apache.tools.ant.XmlLogger -verbose -logfile build_log.xml
