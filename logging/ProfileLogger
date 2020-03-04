@@ -1,0 +1,34 @@
+This logger stores the time needed for executing a task, target and the whole build and prints these information. 
+The output contains a timestamp when entering the build, target or task and a timestamp and the needed time when exiting.
+
+-logger org.apache.tools.ant.listener.ProfileLogger
+
+Example
+
+Buildfile: ...\build.xml
+
+Target aTarget: started Thu Jan 22 09:01:00 CET 2009
+
+echo: started Thu Jan 22 09:01:00 CET 2009
+     [echo] echo-task
+
+echo: finished Thu Jan 22 09:01:00 CET 2009 (250ms)
+
+zip: started Thu Jan 22 09:01:00 CET 2009
+      [zip] Building zip: ...\my.zip
+
+zip: finished Thu Jan 22 09:01:01 CET 2009 (1313ms)
+
+Target aTarget: finished Thu Jan 22 09:01:01 CET 2009 (1719ms)
+
+Target anotherTarget: started Thu Jan 22 09:01:01 CET 2009
+
+echo: started Thu Jan 22 09:01:01 CET 2009
+     [echo] another-echo-task
+
+echo: finished Thu Jan 22 09:01:01 CET 2009 (0ms)
+
+Target anotherTarget: finished Thu Jan 22 09:01:01 CET 2009 (0ms)
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
