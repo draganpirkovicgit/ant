@@ -1,0 +1,16 @@
+Definition:
+
+<scriptdef language="javascript" name="loglevel">
+			<attribute name="level" /> 
+			var logger = project.getBuildListeners().firstElement();
+			logger.setMessageOutputLevel( attributes.get( "level" ) );
+</scriptdef> 
+
+This script definition is getting first build listener (logger) and sets message output level.
+
+Usage:
+
+ <loglevel level="0"/>
+ 
+ Simply pass integer of certain log level to change it.
+  MSG_ERR=0, MSG_WARN=1, MSG_INFO=2, MSG_VERBOSE=3, MSG_DEBUG=4.
